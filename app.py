@@ -62,6 +62,10 @@ def deepseek_reply():
 def dbs():
     return(render_template("dbs.html"))
 
+@app.route('/sepia', methods=['GET', 'POST'])
+def sepia():
+    return render_template("sepia_hf.html")
+
 @app.route("/prediction",methods=["GET","POST"])
 def prediction():
     q = float(request.form.get("q"))
